@@ -1,3 +1,4 @@
+<<<<<<< HEAD:index.html
 <!DOCTYPE html><html><head><meta charset="utf-8"><style>﻿html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
 body{
@@ -145,3 +146,79 @@ body{font-size:16px;}
 <p>markdownファイルと同じ名前のCSSファイルがあれば、読み込んでくれる(HTMLに含める)。</p>
 </li>
 </ul></body></html>
+=======
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>device motion</title>
+    <script type="text/javascript">
+        <!--
+            function init()
+            {
+                window.addEventListener('devicemotion', window_devicemotionHandler);
+                window.addEventListener('deviceorientation', window_deviceorientationHandler);
+            }
+ 
+            function window_devicemotionHandler(event)
+            {
+                var x = document.getElementById('x');
+                var y = document.getElementById('y');
+                var z = document.getElementById('z');
+ 
+                x.value = event.acceleration.x;
+                y.value = event.acceleration.y;
+                z.value = event.acceleration.z;
+            }
+ 
+            function window_deviceorientationHandler(event)
+            {
+                var alpha = document.getElementById('alpha');
+                var beta = document.getElementById('beta');
+                var gamma = document.getElementById('gamma');
+ 
+                alpha.value = event.alpha;
+                beta.value = event.beta;
+                gamma.value = event.gamma;
+            }
+        //-->
+    </script>
+</head>
+<body onload="init()">
+    <section id="motion">
+        <h2>加速度センサー</h2>
+        <ul>
+            <li>
+                <label for="x">X:</label>
+                <input id="x" type="text" value="" readonly="true">
+            </li>
+            <li>
+                <label for="y">Y:</label>
+                <input id="y" type="text" value="" readonly="true">
+            </li>
+            <li>
+                <label for="z">Z:</label>
+                <input id="z" type="text" value="" readonly="true">
+            </li>
+        </ul>
+    </section>
+    <section id="orientation">
+        <h2>ジャイロセンサー</h2>
+        <ul>
+            <li>
+                <label for="alpha">Alpha:</label>
+                <input id="alpha" type="text" value="" readonly="true">
+            </li>
+            <li>
+                <label for="beta">Beta:</label>
+                <input id="beta" type="text" value="" readonly="true">
+            </li>
+            <li>
+                <label for="gamma">Gamma:</label>
+                <input id="gamma" type="text" value="" readonly="true">
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
+>>>>>>> 加速度センサのテストプログラムtest.htmlに編集:test.html
